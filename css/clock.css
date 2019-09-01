@@ -1,0 +1,192 @@
+body {
+    background-color: red;
+}
+
+.clock {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    background-color: blue;
+    text-align: circle;
+    margin: auto;
+    display: block;
+    border: 1px solid green;
+    border-bottom-style: groove;
+    border-width: 10px;
+    border-color: green;
+    box-shadow: 50px 50px 50px 10px grey;
+    animation-name: boxshadow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   margin-bottom: 1000px;
+}
+
+
+
+.dot {
+    text-align: circle;
+    height: 60px;
+    width: 60px;
+    background-color: palegoldenrod;
+    border-radius: 50%;
+    position: relative;
+    top: 220px;
+    left: 220px;
+    margin-top: -50px;
+    margin-left: -50px;
+
+
+}
+
+.second-hand {
+    width: 190px;
+    height: 2px;
+    position: absolute;
+    animation-timing-function: linear;
+    background-color: brown;
+    margin-top: 190px;
+    margin-left: 200px;
+    transform: rotate(-90deg);
+    transform-origin: 0%;
+    animation-name: second-hand-anim;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+    transform-origin: 0%;
+
+}
+
+.minute-hand {
+    width: 150px;
+    height: 4px;
+    position: absolute;
+
+    background-color: springgreen;
+    margin-top: 190px;
+    margin-left: 200px;
+    transform: rotate(390deg);
+    transform-origin: 0%;
+    animation-name: second-hand-anim;
+    animation-duration: 3600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    transform-origin: 0%;
+}
+
+.hour-hand {
+    width: 100px;
+    height: 6px;
+    background-color: black;
+    margin-top: 185px;
+    margin-left: 200px;
+    position: absolute;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    transform: rotate(0deg);
+    transform-origin: 0%;
+    animation-name: hour-hand-anim;
+    animation-duration: 216000s;
+    animation-iteration-count: infinite;
+
+
+
+}
+
+/*animating second hand*/
+@keyframes second-hand-anim {
+    0% {
+        transform: rotate(-90deg);
+
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    75% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+/* Minute hand animation*/
+@keyframes minute-hand-anim {
+    0% {
+        transform: rotate(-90deg)
+    }
+
+    25% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(90deg)
+    }
+
+    75% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(270deg)
+    }
+}
+
+/*hour-hand-animation*/
+@keyframes hour-hand-anim {
+    0% {
+        transform: rotate(-90deg)
+    }
+
+    25% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(90deg)
+    }
+
+    75% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(270deg)
+    }
+}
+
+
+
+
+/*boxshadow*/
+@keyframes boxshadow{
+    0%{
+        transform: rotate(-90deg);
+  box-shadow: 0px 15px 0px 10px grey;
+    }
+    25%{
+        box-shadow: 0px 0px 13px 20px blue;
+        transform: rotate(0deg);
+    }
+    50%{
+       box-shadow: 0px 0px 13px 30px pink; 
+        transform: rotate(90deg);
+    }
+    75%{
+      box-shadow: 0px 0px 13px 40px darkgoldenrod;
+        transform: rotate(180 deg);
+    }
+    100%{
+       box-shadow: 0px 0px 13px 50px green;
+        transform: rotate(270deg);
+    }
+}
